@@ -1,0 +1,88 @@
+    @import url('https://fonts.cdnfonts.com/css/games');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  height: 100vh; /* ajoutez cette ligne pour que la hauteur de body soit la même que la hauteur de la fenêtre */
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+    
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1; /* ajoutez cette ligne pour placer la vidéo en arrière-plan */
+}
+    @media screen and (min-width: 1291px) and (max-width: 1291px) {
+  .content {
+    width: 90%;
+    height: 60%;
+  }
+}
+@media screen and (min-width: 1291px) and (max-width: 1291px) {
+  .content {
+    width: 90%;
+    height: 60%;
+  }
+}
+.content {
+  background: rgba(0, 0, 0, 0.25);
+  background-image: url(Game_Over.gif);
+  border-radius: 5%;
+  background-size: cover;
+  width: 70%; /* modifiez cette valeur pour définir la taille */
+  height: 80%; /* modifiez cette valeur pour définir la taille */
+  padding: 40px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+    
+ .btn {
+        position: absolute;
+        cursor: pointer;
+        border: 5px solid transparent;
+        background-color: transparent;
+        bottom: 15%;
+        right: 32%;
+        height: 100px;
+        width: 150px;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.0);
+}
+    
+.btn1 {
+        position: absolute;
+        cursor: pointer;
+        border: 5px solid transparent;
+        background-color: transparent;
+        bottom: 15%;
+        right: 52%;
+        height: 100px;
+        width: 180px;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.0);
+}
+    

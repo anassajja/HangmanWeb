@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    height: 100vh; /* ajoutez cette ligne pour que la hauteur de body soit la même que la hauteur de la fenêtre */
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1291px) and (max-width: 1291px) {
+    .content {
+      width: 90%;
+      height: 60%;
+    }
+  }
+  
+  .topright { 
+    position: absolute; top: 0%; right: 8%; font-size: 18px;
+  }
+  .container{
+      background: rgba(0, 0, 0, 0.25);
+      background-image: url(gameplay.gif);
+      border-radius: 5%;
+      background-size: cover;
+      width: 70%; 
+      height: 80%; 
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 40px;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+  } 
+  
+  .shadow-word{
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-family:'Courier New', Courier, monospace;
+      letter-spacing:  0.5ch;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -35px;
+     position: absolute;
+      bottom: calc(20% + 35px); /* définir la distance par rapport au bas */
+      left: 25%;
+      width: 50%;
+      height: 20%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 55%;
+  }
+.shadow-word > p{
+    font-size: 55px;
+}
+  .letters-container{
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-top: 1rem;
+      position: absolute;
+      top: 62%;
+  }
+  .letters-container{
+      display: flex;
+      flex-direction: column;
+       bottom: 0;
+      width: 50%;
+      display: flex;
+      left: 25%;
+      height: 20%;
+      flex-direction: column;
+      align-items: center;
+  }
+ .guessed-letters , .wrong-letters{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 5rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 0 10px;
+  }
+
+  .guessed-letters{
+    background-color: #34df1d;
+    height: 35px;
+    position: absolute;
+}
+  .wrong-letters{
+    margin-top: 8px;
+    background-color: red;
+    position: absolute;
+    height: 35px;
+    bottom: 6%;
+}
+  .guessed-letters p , .wrong-letters p{
+      width:280px;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 900;
+      font-size: 1rem;
+  }
+  .guessed-letters i , .wrong-letters i{
+      color: white;
+      font-size: 1.2rem;
+  }
+  
+  form * {
+      font-size: 1rem ;
+      margin-top: 20px;
+  }
+  .form_container{
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.images_container{
+    margin-right: 1rem;
+    position: absolute;
+    left: 0;
+    top: 10;  
+}
+  .images_container img{
+      margin-top: 40px;
+      width: auto;
+      height: auto;
+  }
+  .tries span{
+      font-family: 'Short Stack', cursive;
+      font-weight: 1000;
+      font-size: 1.5rem;
+      border: 1.5px solid whitesmoke;
+      border-radius: .4rem;
+      padding: 6px 3px;
+      margin-left: 10px;
+  }
+  .tries > p{
+      font-family: 'Short Stack', cursive;
+      font-weight: 1000;
+      font-size: 1.5rem;
+      color: white;
+  }
+  .tries {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+    top: 90%
+  }
+      form {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    display: flex;
+    left: 40%;
+    height: 20%;
+    top: 85%
+  }
+   form .text-input {
+    width: 30%;
+    height: 20%;
+    outline: 0;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 1rem;
+    text-indent: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    margin-right: 10px;
+  }
+  
+  form .button {
+    width: 8%;
+    height: 20%;
+    outline: 0;
+    border: 0;
+    background-color: red;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1; /* ajoutez cette ligne pour placer la vidéo en arrière-plan */
+  }
+  
+  .left_arrow {
+     position: absolute;
+     top: 1%;
+     left: 2%;
+     clear: both;
+  }
+      
+   #countdown {
+    position: absolute;
+    margin: auto;
+    margin-top: 100px;
+    bottom: 85%;
+    left: 4.5%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+  }
+  
+  #countdown-number {
+    color: black;
+    font-weight: bolder;
+    display: inline-block;
+    line-height: 40px; 
+  }
+  
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+  }
+  
+  svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: red;
+    fill: none;
+    animation: countdown 10s linear infinite forwards;
+  }
+  
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 113px;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+   

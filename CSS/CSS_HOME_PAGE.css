@@ -1,0 +1,164 @@
+    @import url('https://fonts.cdnfonts.com/css/games');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+  height: 100vh; /* ajoutez cette ligne pour que la hauteur de body soit la même que la hauteur de la fenêtre */
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+ .topright { 
+  position: absolute; top: 0.75%; right: 8%; font-size: 18px;
+}
+    
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1; /* ajoutez cette ligne pour placer la vidéo en arrière-plan */
+}
+@media screen and (min-width: 1291px) and (max-width: 1291px) {
+  .content {
+    width: 90%;
+    height: 60%;
+  }
+}
+
+.content {
+  /*background: rgba(0, 0, 0, 0);*/
+  background-image: url(creepy.gif);
+  border-radius: 5%;
+  background-size: cover;
+  width: 70%; /* modifiez cette valeur pour définir la taille */
+  height: 80%; /* modifiez cette valeur pour définir la taille */
+  padding: 40px;
+  position: relative;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.start {
+  background: transparent;
+  position: relative;
+  text-align: center;
+  width: 350px;
+  padding: 40px;
+  font-size: 35px;
+  color: rgb(167, 61, 61);
+  font: pixeboyregular;
+  border: 5px solid rgb(167, 61, 61);
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  cursor: pointer;
+  border-radius: 100px ;
+  transition: 1.5s;
+}
+
+.start:hover
+{
+  box-shadow: 0 5px 50px 0 rgb(167, 61, 61) inset,0 5px 50px 0 rgb(167, 61, 61),
+              0 5px 50px 0 rgb(167, 61, 61) inset,0 5px 50px 0 rgb(167, 61, 61);
+}
+ 
+.review {
+  background: transparent;
+  position: relative;
+  text-align: center;
+  width: 350px;
+  padding: 40px;
+  font-size: 35px;
+  color: rgb(167, 61, 61);
+  font: pixeboyregular;
+  border: 5px solid rgb(167, 61, 61);
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  cursor: pointer;
+  border-radius: 100px ;
+  transition: 1.5s;
+}
+
+.review:hover
+{
+  box-shadow: 0 5px 50px 0 rgb(167, 61, 61) inset,0 5px 50px 0 rgb(167, 61, 61),
+              0 5px 50px 0 rgb(167, 61, 61) inset,0 5px 50px 0 rgb(167, 61, 61);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ .about {
+   position: absolute;
+   bottom: 3%;
+   left: 3%;
+   clear: both;
+   overflow: auto;
+}
+    
+  .modal {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    align-content: center;
+  }
+
+  .modal-content {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888888d3;
+    width: 80%;
+    height: 40%;
+    top: 30%;
+    bottom: 3%;
+    left: 10%;
+    clear: both;
+    align-content: center;
+}
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+    .modal-content .font {
+        font-size: smaller;
+        font-family: 'Games', sans-serif;  
+    }

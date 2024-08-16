@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HANGMAN</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" type ="text/css" href="./CSS/CSS_HOME_PAGE.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://drive.google.com/file/d/1vYNxNWxiUe6EaxI9g65diG4mk2_AGUoS/preview" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+<div class="content">
+  <div class="topright">
+    <audio src="./audio/arcade.mp3" autoplay id ="audioz"></audio>
+    <img src="./images/SOUND_OFF.png" alt="SOUND-ON" id="Sound_on" onclick="document.getElementById('audioz').play(); this.style.display='none'; document.getElementById('Sound_off').style.display='block'" style="display: none;">
+    <img src="./images/SOUND_ON.png" alt="SOUND-OFF" id="Sound_off" onclick="document.getElementById('audioz').pause(); this.style.display='none'; document.getElementById('Sound_on').style.display='block'">
+  </div>
+    <img src="https://see.fontimg.com/api/renderfont4/1vXe/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjOUMzNzM3IiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/SGFuZ21hbg/game-battles-2-regular.png" alt="Games fonts">
+     <br><br>
+    <a href="theme.html" target="_self"><button id="startBtn" class="start" ><strong>START</strong></button></a>
+    <br><br>
+    <a href="review.html" target="_self"><button id="startBtn" class="review"><strong>REVIEW</strong></button></a>
+    <i class="about" id="myBtn"><img src="./images/about.png" alt="about"></i>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+    <span class="close">&times;</span>
+                <div class="font"> 
+                    <link href="https://fonts.cdnfonts.com/css/games" rel="stylesheet">
+                    <h1><strong>ABOUT US</strong></h1>
+                    <p><b>This is a version of the classic letter guessing game called Hangman. You are shown a set of empty letters that match a word</b></p>
+                    <p><b>or phrase and you must guess what those letters are to reveal the hidden word. You guess by drawing letters from those</b></p>
+                    <p><b>displayed on the sides. If you choose a letter that is in the word, a sound is played and that letter is revealed among the</b></p> 
+                    <p><b>empty letters. I hope you will have fun playing this game and that you can learn or improve your French at the same time.</b></p>  
+                    <p><b>This game was made by the RRRA group. All comments or suggestions are welcome. To contact us. anass.ajja@ynov.com</b></p>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="./JS/JS_HOME_PAGE.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="/stuff/style.css">
+    <link rel="stylesheet" type ="text/css" href="./CSS/CSS_GAMEPLAY.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+    <title>HANGMAN</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://drive.google.com/file/d/1vYNxNWxiUe6EaxI9g65diG4mk2_AGUoS/preview" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="container">
+        <a href="theme.html" target="_self" class="left_arrow"><img src="./images/back.png" alt="button back"></a> 
+        <div class="topright">
+            <audio src="./audio/arcade.mp3" autoplay id ="audioz"></audio>
+            <img src="./images/SOUND_OFF.png" alt="SOUND-ON" id="Sound_on" onclick="document.getElementById('audioz').play(); this.style.display='none'; document.getElementById('Sound_off').style.display='block'"  style="display: none;">
+            <img src="./images/SOUND_ON.png" alt="SOUND-OFF" id="Sound_off" onclick="document.getElementById('audioz').pause(); this.style.display='none'; document.getElementById('Sound_on').style.display='block'">
+        </div>
+        <div id="countdown">
+            <div id="countdown-number"></div>
+                <svg>
+                    <circle r="18" cx="20" cy="20"></circle>
+                </svg>
+        </div>
+        {{ if ne .WicheImage 0}}
+        <div class="images_container">
+            <img src="./assets/image/state{{.WicheImage}}.png" alt="not working">
+        </div>
+        {{end}}
+        <div class="form_container">
+            <div class="shadow-word"><p><strong>{{.ShadowWord}}</strong></p></div>
+        <div class="letters-container">
+            <div class="guessed-letters">
+                <p>Guessed {{.GuessedLetters}}</p>
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="wrong-letters">
+                <p>Wrong {{.WrongLetters}}</p>
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+        <form action="gameplay.html" method="POST">
+            <input class="button" type="submit" value="Try">
+
+            <input class="text-input" type="text" placeholder="enter a letter" name="letter" maxlength="1" required autofocus>
+        </form>
+        <div class="tries">
+            <p>Tries Left : </p><span>{{.TriesLeft}}</span>
+        </div>
+        </div>
+    </div>
+    <script src="./JS/JS_GAMEPLAY.js"></script>
+</body>
+</html>

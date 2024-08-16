@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HANGMAN</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" type ="text/css" href="./CSS/CSS_THEME.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="./JS/JS_SERVER.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://drive.google.com/file/d/1vYNxNWxiUe6EaxI9g65diG4mk2_AGUoS/preview" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+        <div class="topright">
+            <audio src="./audio/arcade.mp3" autoplay id ="audioz"></audio>
+            <img src="./images/SOUND_OFF.png" alt="SOUND-ON" id="Sound_on" onclick="document.getElementById('audioz').play(); this.style.display='none'; document.getElementById('Sound_off').style.display='block'" style="display: none;">
+            <img src="./images/SOUND_ON.png" alt="SOUND-OFF" id="Sound_off" onclick="document.getElementById('audioz').pause(); this.style.display='none'; document.getElementById('Sound_on').style.display='block'" >
+        </div>
+            <a href="home.html" target="_self" class="left_arrow"><img src="./images/back.png" alt="button back"></a> 
+            <i class="difficulty" id="myBtn"><img src="./images/parametre.png" alt="difficulty"></i>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Choose your difficulty</h1>
+                    <br><br>
+                    <p><b>Easy</b></p>
+                    <label class="switch">
+                    <input type="checkbox" onclick="easyClicked()" id="easyCheckbox">
+                    <div class="slider"></div>
+                        <div class="slider-card">
+                            <div class="slider-card-face slider-card-front"></div>
+                            <div class="slider-card-face slider-card-back"></div>
+                        </div>
+                    </a>
+                    </label>
+                    <p><b>Medium</b></p>
+                    <label class="switch">
+                    <input type="checkbox" onclick="mediumClicked()" id="mediumCheckbox" disabled href="theme2.html">
+                    <div class="slider"></div>
+                    <div class="slider-card">
+                    <div class="slider-card-face slider-card-front"></div>
+                    <div class="slider-card-face slider-card-back"></div>
+                    </div>
+                    </label>
+                    <p><b>Hard</b></p>
+                    <label class="switch">
+                    <input type="checkbox" onclick="hardClicked()" id="hardCheckbox" disabled href="theme3.html">
+                    <div class="slider"></div>
+                    <div class="slider-card">
+                    <div class="slider-card-face slider-card-front"></div>
+                    <div class="slider-card-face slider-card-back"></div>
+                    </div>
+                    </label>
+                </div>
+            </div>
+            <img src="./images/theme.png" alt="Theme logo">
+            <div class ="food">
+            <a href= "gameplay.html" target="_self">
+            <button onclick="sendLetter('N')" class ="food1">
+                <img src="https://icons.iconarchive.com/icons/iconicon/veggies/128/bananas-icon.png" width="128" height="128">
+             </button>
+            </a>
+            <img src="./images/3.png" alt="Kids fonts">
+            </div>
+            <div class ="sports">
+            <a href= "gameplay.html" target="_self">
+                <button onclick="sendLetter('S')" class ="sports1">
+                    <img src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/128/cristiano-ronaldo-icon.png" width="128" height="128">
+                </button>
+            </a>
+            <img src="./images/4.png" alt="Kids fonts">
+            </div>
+            <div class ="Cars">
+                <a href= "gameplay.html" target="_self">
+                    <button onclick="sendLetter('C')" class ="Cars1" >
+                        <img src="https://icons.iconarchive.com/icons/calebamesbury/classic-american-cars/128/Muscle-Car-Mustang-GT-icon.png" width="128" height="128">
+                    </button>
+                </a>
+                <img src ="./images/1.png" alt="Kids fonts">
+            </div>
+            <div class ="Flags">
+                <a href= "gameplay.html" target="_self">
+                    <button onclick="sendLetter('F')" class ="Flags1">
+                        <img src="./images/flag.png" width="128" height="128">
+                    </button>
+                </a>    
+                <img src ="./images/2.png" alt="Kids fonts">
+            </div>
+    </div>
+    <script src="./JS/JS_THEME.js"></script>
+</body>
+</html>

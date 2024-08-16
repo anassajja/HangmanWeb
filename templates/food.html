@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HANGMAN</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" type ="text/css" href="./CSS/food.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://drive.google.com/file/d/1vYNxNWxiUe6EaxI9g65diG4mk2_AGUoS/preview" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+        <a href="review.html" target="_self" class="left_arrow"><img src="./images/back.png" alt="button back"></a> 
+        <div class="topright">
+            <audio src="arcade.mp3" autoplay id ="audioz"></audio>
+            <img src="./images/SOUND_OFF.png" alt="SOUND-ON" id="Sound_on" onclick="document.getElementById('audioz').play(); this.style.display='none'; document.getElementById('Sound_off').style.display='block'" style="display: none;">
+            <img src="./images/SOUND_ON.png" alt="SOUND-OFF" id="Sound_off" onclick="document.getElementById('audioz').pause(); this.style.display='none'; document.getElementById('Sound_on').style.display='block'" >
+        </div>
+        <div class="mots1">
+        <p>BUT</p>
+        <p>SOUP</p>
+        <p>KIWI</p>
+        <p>MILK</p>
+        <p>MEAT</p>
+        <p>PEAR</p>
+        <p>BEAN</p>
+        </div>
+        <div class="mots2">
+        <p>ORANGE</p>
+        <p>CELERY</p>
+        <p>CARROT</p>
+        <p>CEREAL</p>
+        <p>CURRANT</p>
+        <p>COFFEE</p>
+        <p>BURGER</p>
+        <p>SAUSAGE</p>
+		</div>
+        <div class="mots3">
+        <p>PASSION FRUIT</p>
+        <p>BLUEBERRY</p>
+        <p>RASPBERRY</p>
+        <p>PINEAPPLE</p>
+        <p>WATERMELON</p>
+        <p>PISTACHIO</p>
+        <p>HAZELNUT</p>
+        <p>GRAPEFRUIT</p>
+		</div>
+        <div class="mots4">
+        <p>PEPPER</p>
+        <p>DOUGH</p>
+        <p>BREAD</p>
+        <p>APPLE</p>
+        <p>DONUT</p>
+        <p>CINNAMON</p>
+        <p>PIZZA</p>
+        <p>MELON</p>
+        </div>
+    </div>
+</body>
+</html>
+    

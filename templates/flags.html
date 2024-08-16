@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HANGMAN</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" type ="text/css" href="./CSS/flags.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://drive.google.com/file/d/1vYNxNWxiUe6EaxI9g65diG4mk2_AGUoS/preview" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+        <a href="review.html" target="_self" class="left_arrow"><img src="./images/back.png" alt="button back"></a> 
+        <div class="topright">
+            <audio src="./audio/arcade.mp3" autoplay id ="audioz"></audio>
+            <img src="./images/SOUND_OFF.png" alt="SOUND-ON" id="Sound_on" onclick="document.getElementById('audioz').play(); this.style.display='none'; document.getElementById('Sound_off').style.display='block'" style="display: none;">
+            <img src="./images/SOUND_ON.png" alt="SOUND-OFF" id="Sound_off" onclick="document.getElementById('audioz').pause(); this.style.display='none'; document.getElementById('Sound_on').style.display='block'" >
+        </div>
+        <div class="mots1">
+        <p>LAOS</p>
+        <p>CUBA</p>
+        <p>PERU</p>
+        <p>IRAN</p>
+        <p>IRAQ</p>
+        <p>MALI</p>
+        <p>TOGO</p>
+        <p>OMAN</p>
+        <p>ITALY</p>
+        <p>EGYPT</p>
+        <p>GHANA</p>
+        <p>MALTA</p>
+        <p>INDIA</p>
+        <p>KENYA</p>
+        </div>
+        <div class="mots2">
+        <p>WALES</p>
+        <p>BRAZIL</p>
+        <p>CANADA</p>
+        <p>RUSSIA</p>
+        <p>NORWAY</p>
+        <p>POLAND</p>
+        <p>SERBIA</p>
+        <p>KOSOVO</p>
+        <p>FRANCE</p>
+        <p>TURKEY</p>
+        <p>GERMANY</p>
+        <p>NIGERIA</p>
+        <p>ESTONIA</p>
+        <p>CROATIA</p>
+		</div>
+        <div class="mots3">
+        <p>HUNGARY</p>
+        <p>MOROCCO</p>
+        <p>ARMENIA</p>
+        <p>SOMALIA</p>
+        <p>VIETNAM</p>
+        <p>AUSTRIA</p>
+        <p>EQUATOR</p>
+        <p>BELGIUM</p>
+        <p>ROMANIA</p>
+        <p>SLOVAKIA</p>
+        <p>COLOMBIA</p>
+        <p>PAKISTAN</p>
+        <p>ARGENTINA</p>
+        <p>INDONESIA</p>
+		</div>
+        <div class="mots4">
+        <p>VENEZUELA</p>
+        <p>NICARAGUA</p>
+        <p>MOZAMBIQUE</p>
+        <p>COSTA RICA</p>
+        <p>AFGHANISTAN</p>
+        <p>SOUTH KOREA</p>
+        <p>SOUTH AFRICA</p>
+        <p>UNITED STATES</p>
+	   </div>
+    </div>
+ </div>
+</body>
+</html>
+    
